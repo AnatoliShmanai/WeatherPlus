@@ -11,10 +11,13 @@ class ViewController: UIViewController {
     let maxHeaderHeight: CGFloat = 250
     let minHeaderHeight: CGFloat = 80
     var previousScrollOffset: CGFloat = 0
+    
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var headerViewHeight: NSLayoutConstraint!
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    @IBOutlet weak var tempLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +25,9 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         collectionView.delegate = self
         collectionView.dataSource = self
+    
+        tableView.register(HorTableViewCell.nib(), forCellReuseIdentifier: "HorTableViewCell")
+
         
 //        let cell = UINib(nibName: "myCellTableViewCell", bundle: nil)
 //        tableView.register(cell, forCellReuseIdentifier: "myCell")
@@ -34,11 +40,32 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource {
         20
 
     }
+    
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
-        cell.textLabel?.text = "Wow!"
-        cell.textLabel?.textColor = .white
-        return cell
+       
+        
+        
+        switch indexPath.row {
+        
+        case 0:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "HorTableViewCell", for: indexPath) as! HorTableViewCell
+
+            cell.backgroundColor = .clear
+
+
+
+            return cell
+            
+        default:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
+             cell.textLabel?.text = "Wow!"
+             cell.textLabel?.textColor = .white
+             return cell
+        }
+        
+        
+        
     }
 }
 extension ViewController {
@@ -59,8 +86,15 @@ extension ViewController {
             var newHeight = headerViewHeight.constant
             if isScrollingDown {
                 newHeight = max(minHeaderHeight, headerViewHeight.constant - abs(scrollDiff))
+                DispatchQueue.main.async {
+                    self.tempLabel.isHidden = true
+                }
+                
             } else if isScrollingUp {
                 newHeight = min(maxHeaderHeight, headerViewHeight.constant + abs(scrollDiff))
+                DispatchQueue.main.async {
+                    self.tempLabel.isHidden = false
+                }
             }
             if newHeight != headerViewHeight.constant {
                 headerViewHeight.constant = newHeight

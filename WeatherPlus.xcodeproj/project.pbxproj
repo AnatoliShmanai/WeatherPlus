@@ -13,6 +13,9 @@
 		5C4DF046257FD585009DBD05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C4DF044257FD585009DBD05 /* Main.storyboard */; };
 		5C4DF048257FD586009DBD05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C4DF047257FD586009DBD05 /* Assets.xcassets */; };
 		5C4DF04B257FD586009DBD05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C4DF049257FD586009DBD05 /* LaunchScreen.storyboard */; };
+		5C4DF055257FEFD4009DBD05 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4DF054257FEFD4009DBD05 /* Model.swift */; };
+		5C4DF067257FF941009DBD05 /* HorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4DF065257FF941009DBD05 /* HorTableViewCell.swift */; };
+		5C4DF068257FF941009DBD05 /* HorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C4DF066257FF941009DBD05 /* HorTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		5C4DF047257FD586009DBD05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C4DF04A257FD586009DBD05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C4DF04C257FD586009DBD05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C4DF054257FEFD4009DBD05 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		5C4DF065257FF941009DBD05 /* HorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorTableViewCell.swift; sourceTree = "<group>"; };
+		5C4DF066257FF941009DBD05 /* HorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HorTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +64,24 @@
 			children = (
 				5C4DF03E257FD585009DBD05 /* AppDelegate.swift */,
 				5C4DF040257FD585009DBD05 /* SceneDelegate.swift */,
+				5C4DF054257FEFD4009DBD05 /* Model.swift */,
 				5C4DF042257FD585009DBD05 /* ViewController.swift */,
+				5C4DF06A25800596009DBD05 /* HorTableViewCell */,
 				5C4DF044257FD585009DBD05 /* Main.storyboard */,
 				5C4DF047257FD586009DBD05 /* Assets.xcassets */,
 				5C4DF049257FD586009DBD05 /* LaunchScreen.storyboard */,
 				5C4DF04C257FD586009DBD05 /* Info.plist */,
 			);
 			path = WeatherPlus;
+			sourceTree = "<group>";
+		};
+		5C4DF06A25800596009DBD05 /* HorTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				5C4DF065257FF941009DBD05 /* HorTableViewCell.swift */,
+				5C4DF066257FF941009DBD05 /* HorTableViewCell.xib */,
+			);
+			path = HorTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C4DF04B257FD586009DBD05 /* LaunchScreen.storyboard in Resources */,
+				5C4DF068257FF941009DBD05 /* HorTableViewCell.xib in Resources */,
 				5C4DF048257FD586009DBD05 /* Assets.xcassets in Resources */,
 				5C4DF046257FD585009DBD05 /* Main.storyboard in Resources */,
 			);
@@ -137,9 +155,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C4DF067257FF941009DBD05 /* HorTableViewCell.swift in Sources */,
 				5C4DF043257FD585009DBD05 /* ViewController.swift in Sources */,
 				5C4DF03F257FD585009DBD05 /* AppDelegate.swift in Sources */,
 				5C4DF041257FD585009DBD05 /* SceneDelegate.swift in Sources */,
+				5C4DF055257FEFD4009DBD05 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,7 +316,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.vintagemixing.WeatherPlus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -315,7 +335,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.vintagemixing.WeatherPlus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

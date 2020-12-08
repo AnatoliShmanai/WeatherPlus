@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     let maxHeaderHeight: CGFloat = 250
-    let minHeaderHeight: CGFloat = 80
+    let minHeaderHeight: CGFloat = 120
     var previousScrollOffset: CGFloat = 0
     
 
@@ -67,6 +67,20 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource {
         
         
     }
+    
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 0 {
+            return 150
+        }
+            return 50
+    }
+  
+     
+    
+    
+    
+    
 }
 extension ViewController {
     func canAnimateHeader (_ scrollView: UIScrollView) -> Bool {
@@ -107,7 +121,7 @@ extension ViewController {
 
 
 
-extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10
     }
@@ -117,6 +131,10 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
+        {
+           return CGSize(width: 100.0, height: 120.0)
+        }
     
     
 }

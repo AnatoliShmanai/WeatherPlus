@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hXS-Sh-aaM">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="220"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Минск" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWk-ob-4tP">
                                         <rect key="frame" x="177.5" y="52" width="59" height="23"/>
@@ -42,7 +42,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p8f-io-PMt">
-                                        <rect key="frame" x="0.0" y="219" width="414" height="1"/>
+                                        <rect key="frame" x="0.0" y="299" width="414" height="1"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="E4N-4n-Yoc"/>
@@ -55,7 +55,7 @@
                                     <constraint firstItem="GWk-ob-4tP" firstAttribute="top" secondItem="hXS-Sh-aaM" secondAttribute="topMargin" id="Ak8-fa-qly"/>
                                     <constraint firstItem="p8f-io-PMt" firstAttribute="leading" secondItem="hXS-Sh-aaM" secondAttribute="leading" id="MeK-h6-eKB"/>
                                     <constraint firstItem="cZy-n1-QCo" firstAttribute="top" secondItem="kzx-jg-J0P" secondAttribute="bottom" constant="40" id="OEY-UJ-zJC"/>
-                                    <constraint firstAttribute="height" constant="220" id="XjM-A3-k39"/>
+                                    <constraint firstAttribute="height" constant="300" id="XjM-A3-k39"/>
                                     <constraint firstItem="kzx-jg-J0P" firstAttribute="centerX" secondItem="hXS-Sh-aaM" secondAttribute="centerX" id="bbe-0W-kWj"/>
                                     <constraint firstItem="cZy-n1-QCo" firstAttribute="centerX" secondItem="hXS-Sh-aaM" secondAttribute="centerX" id="c08-nj-VA6"/>
                                     <constraint firstAttribute="trailing" secondItem="p8f-io-PMt" secondAttribute="trailing" id="dFF-O7-JWa"/>
@@ -64,7 +64,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5lv-Ie-gUc">
-                                <rect key="frame" x="0.0" y="338" width="414" height="558"/>
+                                <rect key="frame" x="0.0" y="418" width="414" height="478"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -82,7 +82,7 @@
                                 </prototypes>
                             </tableView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PIn-as-mDm">
-                                <rect key="frame" x="0.0" y="220" width="414" height="118"/>
+                                <rect key="frame" x="0.0" y="300" width="414" height="118"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PP5-65-Tsp">
                                     <size key="itemSize" width="128" height="128"/>
@@ -131,7 +131,7 @@
                                 </cells>
                             </collectionView>
                             <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Ev-Al-0lE">
-                                <rect key="frame" x="0.0" y="338" width="414" height="1"/>
+                                <rect key="frame" x="0.0" y="418" width="414" height="1"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="Gmw-Hh-CzN"/>

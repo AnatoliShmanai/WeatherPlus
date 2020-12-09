@@ -6,11 +6,14 @@
 //
 
 import UIKit
+import CoreLocation
 
 class ViewController: UIViewController {
-    let maxHeaderHeight: CGFloat = 250
+    let maxHeaderHeight: CGFloat = 300
     let minHeaderHeight: CGFloat = 120
     var previousScrollOffset: CGFloat = 0
+    
+    let locationManager = CLLocationManager()
     
 
     @IBOutlet weak var tableView: UITableView!
@@ -25,6 +28,11 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.requestLocation()
     
         tableView.register(HorTableViewCell.nib(), forCellReuseIdentifier: "HorTableViewCell")
 
@@ -70,10 +78,16 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row == 0 {
-            return 150
+        switch indexPath.row {
+        case 0:
+            return 200
+        case 1:
+            return 90
+            
+        default:
+            return 40
+            
         }
-            return 50
     }
   
      
@@ -136,5 +150,26 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, 
            return CGSize(width: 100.0, height: 120.0)
         }
     
+    
+}
+
+
+// MARK:- CLLocation Delegate
+
+extension ViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.last {
+            
+            locationManager.stopUpdatingLocation()
+            let lat = location.coordinate.latitude
+            let lon = location.coordinate.longitude
+            
+            print(lat,lon)
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error)
+    }
     
 }

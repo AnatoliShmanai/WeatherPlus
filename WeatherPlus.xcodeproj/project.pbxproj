@@ -20,6 +20,8 @@
 		5C732D6E25821FA400406440 /* HourlyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C732D6C25821FA400406440 /* HourlyCollectionViewCell.swift */; };
 		5C732D6F25821FA400406440 /* HourlyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C732D6D25821FA400406440 /* HourlyCollectionViewCell.xib */; };
 		5C732D7225822AFB00406440 /* DescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C732D7125822AFB00406440 /* DescriptionTableViewCell.swift */; };
+		5C732D762582817500406440 /* DailyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C732D742582817500406440 /* DailyCollectionViewCell.swift */; };
+		5C732D772582817500406440 /* DailyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C732D752582817500406440 /* DailyCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		5C732D6C25821FA400406440 /* HourlyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyCollectionViewCell.swift; sourceTree = "<group>"; };
 		5C732D6D25821FA400406440 /* HourlyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HourlyCollectionViewCell.xib; sourceTree = "<group>"; };
 		5C732D7125822AFB00406440 /* DescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTableViewCell.swift; sourceTree = "<group>"; };
+		5C732D742582817500406440 /* DailyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyCollectionViewCell.swift; sourceTree = "<group>"; };
+		5C732D752582817500406440 /* DailyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,13 +76,12 @@
 			children = (
 				5C4DF03E257FD585009DBD05 /* AppDelegate.swift */,
 				5C4DF040257FD585009DBD05 /* SceneDelegate.swift */,
-				5C4DF054257FEFD4009DBD05 /* Model.swift */,
-				5C732D5D258179A400406440 /* WeatherManager.swift */,
-				5C4DF042257FD585009DBD05 /* ViewController.swift */,
-				5C732D7125822AFB00406440 /* DescriptionTableViewCell.swift */,
+				5CF0CC732582AB9800A0C520 /* Model */,
+				5CF0CC762582ABBF00A0C520 /* View */,
+				5CF0CC742582ABAC00A0C520 /* Controller */,
+				5CF0CC772582ABE100A0C520 /* DescriptionCell */,
+				5C4DF06A25800596009DBD05 /* Daily */,
 				5C732D6925821F7000406440 /* Hourly */,
-				5C4DF06A25800596009DBD05 /* HorTableViewCell */,
-				5C4DF044257FD585009DBD05 /* Main.storyboard */,
 				5C4DF047257FD586009DBD05 /* Assets.xcassets */,
 				5C4DF049257FD586009DBD05 /* LaunchScreen.storyboard */,
 				5C4DF04C257FD586009DBD05 /* Info.plist */,
@@ -86,13 +89,14 @@
 			path = WeatherPlus;
 			sourceTree = "<group>";
 		};
-		5C4DF06A25800596009DBD05 /* HorTableViewCell */ = {
+		5C4DF06A25800596009DBD05 /* Daily */ = {
 			isa = PBXGroup;
 			children = (
 				5C4DF065257FF941009DBD05 /* HorTableViewCell.swift */,
 				5C4DF066257FF941009DBD05 /* HorTableViewCell.xib */,
+				5C732D792582820500406440 /* Daily CustomCell */,
 			);
-			path = HorTableViewCell;
+			path = Daily;
 			sourceTree = "<group>";
 		};
 		5C732D6925821F7000406440 /* Hourly */ = {
@@ -102,6 +106,48 @@
 				5C732D6D25821FA400406440 /* HourlyCollectionViewCell.xib */,
 			);
 			path = Hourly;
+			sourceTree = "<group>";
+		};
+		5C732D792582820500406440 /* Daily CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				5C732D742582817500406440 /* DailyCollectionViewCell.swift */,
+				5C732D752582817500406440 /* DailyCollectionViewCell.xib */,
+			);
+			path = "Daily CustomCell";
+			sourceTree = "<group>";
+		};
+		5CF0CC732582AB9800A0C520 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5C732D5D258179A400406440 /* WeatherManager.swift */,
+				5C4DF054257FEFD4009DBD05 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5CF0CC742582ABAC00A0C520 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5C4DF042257FD585009DBD05 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5CF0CC762582ABBF00A0C520 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5C4DF044257FD585009DBD05 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5CF0CC772582ABE100A0C520 /* DescriptionCell */ = {
+			isa = PBXGroup;
+			children = (
+				5C732D7125822AFB00406440 /* DescriptionTableViewCell.swift */,
+			);
+			path = DescriptionCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +209,7 @@
 			files = (
 				5C4DF04B257FD586009DBD05 /* LaunchScreen.storyboard in Resources */,
 				5C4DF068257FF941009DBD05 /* HorTableViewCell.xib in Resources */,
+				5C732D772582817500406440 /* DailyCollectionViewCell.xib in Resources */,
 				5C4DF048257FD586009DBD05 /* Assets.xcassets in Resources */,
 				5C4DF046257FD585009DBD05 /* Main.storyboard in Resources */,
 				5C732D6F25821FA400406440 /* HourlyCollectionViewCell.xib in Resources */,
@@ -182,6 +229,7 @@
 				5C4DF067257FF941009DBD05 /* HorTableViewCell.swift in Sources */,
 				5C4DF043257FD585009DBD05 /* ViewController.swift in Sources */,
 				5C4DF03F257FD585009DBD05 /* AppDelegate.swift in Sources */,
+				5C732D762582817500406440 /* DailyCollectionViewCell.swift in Sources */,
 				5C4DF041257FD585009DBD05 /* SceneDelegate.swift in Sources */,
 				5C4DF055257FEFD4009DBD05 /* Model.swift in Sources */,
 			);

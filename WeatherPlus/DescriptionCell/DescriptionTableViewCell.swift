@@ -27,12 +27,12 @@ class DescriptionTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configure(with model: WeatherData) {
-        self.descriptionValueLabel.text = "\(model.main.temp)"
-//        self.iconImageView.contentMode = .scaleAspectFit
-//        self.iconImageView.image = UIImage(systemName: "sun.max.fill")?.withTintColor(.systemYellow)
-        self.descriptionTextLabel.text = model.name
-    }
+//    func configure(with model: WeatherData) {
+//        self.descriptionValueLabel.text = "\(model.timezone)"
+////        self.iconImageView.contentMode = .scaleAspectFit
+////        self.iconImageView.image = UIImage(systemName: "sun.max.fill")?.withTintColor(.systemYellow)
+//        self.descriptionTextLabel.text = model.timezone
+//    }
 
     
     

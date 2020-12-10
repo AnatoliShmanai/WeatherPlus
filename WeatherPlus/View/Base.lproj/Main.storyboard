@@ -83,19 +83,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0pa-77-j1a" id="aHK-pP-0by">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Погода збс! ощущается щбс! Все збс!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sb6-DK-0aR">
-                                                    <rect key="frame" x="10" y="4" width="316" height="21.5"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <constraints>
-                                                <constraint firstItem="sb6-DK-0aR" firstAttribute="leading" secondItem="aHK-pP-0by" secondAttribute="leading" constant="10" id="2AL-SV-cbV"/>
-                                                <constraint firstItem="sb6-DK-0aR" firstAttribute="top" secondItem="aHK-pP-0by" secondAttribute="top" constant="4" id="cVL-79-QNB"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
@@ -218,6 +206,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cityNameLabel" destination="GWk-ob-4tP" id="2pP-JX-pG9"/>
                         <outlet property="collectionView" destination="PIn-as-mDm" id="ssN-xw-DXK"/>
                         <outlet property="descriptionLabel" destination="kzx-jg-J0P" id="ws6-eJ-xyJ"/>
                         <outlet property="headerViewHeight" destination="XjM-A3-k39" id="X3E-0h-F7R"/>

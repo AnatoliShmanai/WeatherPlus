@@ -13,7 +13,7 @@ class HourlyCollectionViewCell: UICollectionViewCell {
     @IBOutlet var timeLabel: UILabel!
     @IBOutlet var iconImageView: UIImageView!
     @IBOutlet var tempLabel: UILabel!
-
+    @IBOutlet var humidityLabel: UILabel!
     
     static let identifier = "HoulectionViewCellrlyCol"
     
@@ -27,13 +27,25 @@ class HourlyCollectionViewCell: UICollectionViewCell {
     }
 
     
-    func configure(with model: WeatherData) {
-        self.tempLabel.text = "\(model.main.temp)"
+    func configure(with model: WeatherData, and indexPath: IndexPath) {
+        self.tempLabel.text = String(format: "%.f", model.hourly[indexPath.row].temp) + "°"
 //        self.iconImageView.contentMode = .scaleAspectFit
 //        self.iconImageView.image = UIImage(systemName: "sun.max.fill")?.withTintColor(.systemYellow)
-        self.timeLabel.text = model.name
+        self.timeLabel.text = getDayForDate(Date(timeIntervalSince1970: Double(model.hourly[indexPath.row].dt)))
+        self.humidityLabel.text = String(model.hourly[indexPath.row].humidity) + " %"
     }
+    
+    func getDayForDate(_ date: Date?) -> String {
+        guard let inputDate = date else {
+            return ""
+        }
 
+        let formatter = DateFormatter()
+//        formatter.dateFormat = "EEEE" // Monday
+                formatter.dateFormat = "HH" // Hours
+
+        return formatter.string(from: inputDate)
+    }
    
 
 }

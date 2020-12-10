@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var descriptionLabel: UILabel!
     
-   
+    @IBOutlet weak var cityNameLabel: UILabel!
     
    
     
@@ -71,7 +71,7 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource {
    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        20
+        return (descriptionHeaderArray.count + 2)
 
     }
     
@@ -83,15 +83,54 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "HorTableViewCell", for: indexPath) as! HorTableViewCell
             cell.backgroundColor = .clear
             return cell
-//        case 1:
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "firstCell", for: indexPath)
-//            return cell
+        case 1:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "firstCell", for: indexPath)
+            if !myArray.isEmpty {
+                
+                cell.textLabel?.text = "Сегодня: Сейчас \(myArray[0].current.weather[0].description). Температура воздуха \(String(format: "%.f", myArray[0].current.temp))°, максимальная температура воздуха \(String(format: "%.f", myArray[0].daily[0].temp.max))°."
+                
+            }
+            cell.textLabel?.textColor = .white
+//            cell.textLabel?.textAlignment = .
+            cell.textLabel?.numberOfLines = 0
+            
+            return cell
             
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "DescriptionTableViewCell", for: indexPath) as! DescriptionTableViewCell
             
             if !myArray.isEmpty {
-                cell.configure(with: myArray[0])
+//                cell.configure(with: myArray[0])
+                switch indexPath.row {
+                case 2:
+                    cell.descriptionTextLabel.text = descriptionHeaderArray[indexPath.row - 2]
+                    cell.descriptionValueLabel.text = self.getTimeForDate(Date(timeIntervalSince1970: Double(myArray[0].current.sunrise)))
+                case 3:
+                    cell.descriptionTextLabel.text = descriptionHeaderArray[indexPath.row - 2]
+                    cell.descriptionValueLabel.text = self.getTimeForDate(Date(timeIntervalSince1970: Double(myArray[0].current.sunset)))
+                case 4:
+                    cell.descriptionTextLabel.text = descriptionHeaderArray[indexPath.row - 2]
+                    cell.descriptionValueLabel.text = String(myArray[0].current.humidity) + "%"
+                case 5:
+                    cell.descriptionTextLabel.text = descriptionHeaderArray[indexPath.row - 2]
+                    cell.descriptionValueLabel.text = String(format: "%.f", myArray[0].current.wind_speed) + " м/с"
+                case 6:
+                    cell.descriptionTextLabel.text = descriptionHeaderArray[indexPath.row - 2]
+                    cell.descriptionValueLabel.text = String(format: "%.1f", myArray[0].current.feels_like) + "°"
+                    
+                case 7:
+                    cell.descriptionTextLabel.text = descriptionHeaderArray[indexPath.row - 2]
+                    cell.descriptionValueLabel.text = String(format: "%.1f", (Double(myArray[0].current.pressure) / 133.0 * 100.0)) + " мм рт. ст."
+                case 8:
+                    cell.descriptionTextLabel.text = descriptionHeaderArray[indexPath.row - 2]
+                    cell.descriptionValueLabel.text = String(format: "%.1f", myArray[0].current.visibility / 1000.0) + " км"
+                case 9:
+                    cell.descriptionTextLabel.text = descriptionHeaderArray[indexPath.row - 2]
+                    cell.descriptionValueLabel.text = String(format: "%.f", myArray[0].current.uvi)
+                    
+                default:
+                    print("no header")
+                }
             }
             
             
@@ -104,8 +143,8 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource {
         switch indexPath.row {
         case 0:
             return 250
-//        case 1:
-//            return 90
+        case 1:
+            return 100
             
         default:
             return 70
@@ -163,20 +202,23 @@ extension ViewController {
 
 extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if !myArray.isEmpty {
+            return myArray[0].hourly.count
+        }
         return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HourlyCollectionViewCell", for: indexPath) as! HourlyCollectionViewCell
         if !myArray.isEmpty {
-            cell.configure(with: myArray[0])
+            cell.configure(with: myArray[0], and: indexPath )
         }
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
         {
-           return CGSize(width: 100.0, height: 120.0)
+           return CGSize(width: 60.0, height: 120.0)
         }
     
     
@@ -218,9 +260,10 @@ extension ViewController: WeatherManagerDelegate {
             // Here we get data from model and setup UI
             self.collectionView.reloadData()
             self.tableView.reloadData()
-            self.tempLabel.text = String(format: "%.f", weather.main.temp)
-            self.descriptionLabel.text = weather.weather[0].description
-            self.minMaxCurrentLabel.text = "мин. \(String(format: "%.f", weather.main.temp_min))°, макс \(String(format: "%.f", weather.main.temp_max))°"
+            self.cityNameLabel.text = weather.timezone
+            self.tempLabel.text = String(format: "%.f", weather.current.temp) + "°"
+            self.descriptionLabel.text = weather.current.weather[0].description
+            self.minMaxCurrentLabel.text = "мин. \(String(format: "%.f", weather.daily[0].temp.min))°, макс \(String(format: "%.f", weather.daily[0].temp.max))°"
 
         }
         
@@ -231,4 +274,20 @@ extension ViewController: WeatherManagerDelegate {
     }
     
     
+}
+
+//MARK:- DateFoematter
+
+extension ViewController {
+    func getTimeForDate(_ date: Date?) -> String {
+        guard let inputDate = date else {
+            return ""
+        }
+
+        let formatter = DateFormatter()
+//        formatter.dateFormat = "EEEE" // Monday
+                formatter.dateFormat = "HH:mm" // Hours
+
+        return formatter.string(from: inputDate)
+    }
 }

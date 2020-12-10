@@ -17,6 +17,9 @@
 		5C4DF067257FF941009DBD05 /* HorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4DF065257FF941009DBD05 /* HorTableViewCell.swift */; };
 		5C4DF068257FF941009DBD05 /* HorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C4DF066257FF941009DBD05 /* HorTableViewCell.xib */; };
 		5C732D5E258179A400406440 /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C732D5D258179A400406440 /* WeatherManager.swift */; };
+		5C732D6E25821FA400406440 /* HourlyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C732D6C25821FA400406440 /* HourlyCollectionViewCell.swift */; };
+		5C732D6F25821FA400406440 /* HourlyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C732D6D25821FA400406440 /* HourlyCollectionViewCell.xib */; };
+		5C732D7225822AFB00406440 /* DescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C732D7125822AFB00406440 /* DescriptionTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		5C4DF065257FF941009DBD05 /* HorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorTableViewCell.swift; sourceTree = "<group>"; };
 		5C4DF066257FF941009DBD05 /* HorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HorTableViewCell.xib; sourceTree = "<group>"; };
 		5C732D5D258179A400406440 /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
+		5C732D6C25821FA400406440 /* HourlyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyCollectionViewCell.swift; sourceTree = "<group>"; };
+		5C732D6D25821FA400406440 /* HourlyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HourlyCollectionViewCell.xib; sourceTree = "<group>"; };
+		5C732D7125822AFB00406440 /* DescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +75,8 @@
 				5C4DF054257FEFD4009DBD05 /* Model.swift */,
 				5C732D5D258179A400406440 /* WeatherManager.swift */,
 				5C4DF042257FD585009DBD05 /* ViewController.swift */,
+				5C732D7125822AFB00406440 /* DescriptionTableViewCell.swift */,
+				5C732D6925821F7000406440 /* Hourly */,
 				5C4DF06A25800596009DBD05 /* HorTableViewCell */,
 				5C4DF044257FD585009DBD05 /* Main.storyboard */,
 				5C4DF047257FD586009DBD05 /* Assets.xcassets */,
@@ -85,6 +93,15 @@
 				5C4DF066257FF941009DBD05 /* HorTableViewCell.xib */,
 			);
 			path = HorTableViewCell;
+			sourceTree = "<group>";
+		};
+		5C732D6925821F7000406440 /* Hourly */ = {
+			isa = PBXGroup;
+			children = (
+				5C732D6C25821FA400406440 /* HourlyCollectionViewCell.swift */,
+				5C732D6D25821FA400406440 /* HourlyCollectionViewCell.xib */,
+			);
+			path = Hourly;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +165,7 @@
 				5C4DF068257FF941009DBD05 /* HorTableViewCell.xib in Resources */,
 				5C4DF048257FD586009DBD05 /* Assets.xcassets in Resources */,
 				5C4DF046257FD585009DBD05 /* Main.storyboard in Resources */,
+				5C732D6F25821FA400406440 /* HourlyCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +176,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C732D7225822AFB00406440 /* DescriptionTableViewCell.swift in Sources */,
+				5C732D6E25821FA400406440 /* HourlyCollectionViewCell.swift in Sources */,
 				5C732D5E258179A400406440 /* WeatherManager.swift in Sources */,
 				5C4DF067257FF941009DBD05 /* HorTableViewCell.swift in Sources */,
 				5C4DF043257FD585009DBD05 /* ViewController.swift in Sources */,

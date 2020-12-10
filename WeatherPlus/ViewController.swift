@@ -47,6 +47,7 @@ class ViewController: UIViewController {
         locationManager.requestLocation()
     
         tableView.register(HorTableViewCell.nib(), forCellReuseIdentifier: "HorTableViewCell")
+        collectionView.register(HourlyCollectionViewCell.nib(), forCellWithReuseIdentifier: "HourlyCollectionViewCell")
 
         
 //        let cell = UINib(nibName: "myCellTableViewCell", bundle: nil)
@@ -87,8 +88,13 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource {
 //            return cell
             
         default:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
-            print(myArray)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "DescriptionTableViewCell", for: indexPath) as! DescriptionTableViewCell
+            
+            if !myArray.isEmpty {
+                cell.configure(with: myArray[0])
+            }
+            
+            
              return cell
         }
     }
@@ -161,7 +167,10 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, 
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCollectionCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HourlyCollectionViewCell", for: indexPath) as! HourlyCollectionViewCell
+        if !myArray.isEmpty {
+            cell.configure(with: myArray[0])
+        }
         return cell
     }
     
@@ -201,16 +210,17 @@ extension ViewController: CLLocationManagerDelegate {
 
 extension ViewController: WeatherManagerDelegate {
     func didUpdateWeather(_ weatgerManager: WeatherManager, weather: WeatherData) {
+        
+        self.myArray.append(weather)
+        
         DispatchQueue.main.async {
             
             // Here we get data from model and setup UI
-            
-            
+            self.collectionView.reloadData()
+            self.tableView.reloadData()
             self.tempLabel.text = String(format: "%.f", weather.main.temp)
             self.descriptionLabel.text = weather.weather[0].description
             self.minMaxCurrentLabel.text = "мин. \(String(format: "%.f", weather.main.temp_min))°, макс \(String(format: "%.f", weather.main.temp_max))°"
-            self.myArray.append(weather)
-            
 
         }
         

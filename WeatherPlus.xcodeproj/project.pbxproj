@@ -16,6 +16,7 @@
 		5C4DF055257FEFD4009DBD05 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4DF054257FEFD4009DBD05 /* Model.swift */; };
 		5C4DF067257FF941009DBD05 /* HorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4DF065257FF941009DBD05 /* HorTableViewCell.swift */; };
 		5C4DF068257FF941009DBD05 /* HorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C4DF066257FF941009DBD05 /* HorTableViewCell.xib */; };
+		5C732D5E258179A400406440 /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C732D5D258179A400406440 /* WeatherManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		5C4DF054257FEFD4009DBD05 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		5C4DF065257FF941009DBD05 /* HorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorTableViewCell.swift; sourceTree = "<group>"; };
 		5C4DF066257FF941009DBD05 /* HorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HorTableViewCell.xib; sourceTree = "<group>"; };
+		5C732D5D258179A400406440 /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				5C4DF03E257FD585009DBD05 /* AppDelegate.swift */,
 				5C4DF040257FD585009DBD05 /* SceneDelegate.swift */,
 				5C4DF054257FEFD4009DBD05 /* Model.swift */,
+				5C732D5D258179A400406440 /* WeatherManager.swift */,
 				5C4DF042257FD585009DBD05 /* ViewController.swift */,
 				5C4DF06A25800596009DBD05 /* HorTableViewCell */,
 				5C4DF044257FD585009DBD05 /* Main.storyboard */,
@@ -155,6 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C732D5E258179A400406440 /* WeatherManager.swift in Sources */,
 				5C4DF067257FF941009DBD05 /* HorTableViewCell.swift in Sources */,
 				5C4DF043257FD585009DBD05 /* ViewController.swift in Sources */,
 				5C4DF03F257FD585009DBD05 /* AppDelegate.swift in Sources */,

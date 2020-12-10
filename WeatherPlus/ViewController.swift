@@ -9,18 +9,29 @@ import UIKit
 import CoreLocation
 
 class ViewController: UIViewController {
-    let maxHeaderHeight: CGFloat = 300
+    let maxHeaderHeight: CGFloat = 320
     let minHeaderHeight: CGFloat = 120
     var previousScrollOffset: CGFloat = 0
     
     let locationManager = CLLocationManager()
+    var weatherManager = WeatherManager()
     
-
+    var myArray = [WeatherData]()
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var headerViewHeight: NSLayoutConstraint!
     @IBOutlet weak var collectionView: UICollectionView!
     
     @IBOutlet weak var tempLabel: UILabel!
+    
+    
+    @IBOutlet weak var minMaxCurrentLabel: UILabel!
+    
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
+   
+    
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +40,7 @@ class ViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         
+        weatherManager.delegate = self
         
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
@@ -41,9 +53,22 @@ class ViewController: UIViewController {
 //        tableView.register(cell, forCellReuseIdentifier: "myCell")
 
     }
+    
+    
 }
 
+
+
+
+
+
+
+//MARK:- TableVIew
+
 extension ViewController:UITableViewDelegate,UITableViewDataSource {
+    
+   
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         20
 
@@ -51,51 +76,42 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       
-        
         
         switch indexPath.row {
-        
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "HorTableViewCell", for: indexPath) as! HorTableViewCell
-
             cell.backgroundColor = .clear
-
-
-
             return cell
+//        case 1:
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "firstCell", for: indexPath)
+//            return cell
             
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
-             cell.textLabel?.text = "Wow!"
-             cell.textLabel?.textColor = .white
+            print(myArray)
              return cell
         }
-        
-        
-        
     }
     
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.row {
         case 0:
-            return 200
-        case 1:
-            return 90
+            return 250
+//        case 1:
+//            return 90
             
         default:
-            return 40
+            return 70
             
         }
     }
-  
-     
-    
-    
-    
     
 }
+
+
+//MARK:- Animation Header View
+
 extension ViewController {
     func canAnimateHeader (_ scrollView: UIScrollView) -> Bool {
         let scrollViewMaxHeight = scrollView.frame.height + self.headerViewHeight.constant - minHeaderHeight
@@ -116,12 +132,14 @@ extension ViewController {
                 newHeight = max(minHeaderHeight, headerViewHeight.constant - abs(scrollDiff))
                 DispatchQueue.main.async {
                     self.tempLabel.isHidden = true
+                    self.minMaxCurrentLabel.isHidden = true
                 }
                 
             } else if isScrollingUp {
                 newHeight = min(maxHeaderHeight, headerViewHeight.constant + abs(scrollDiff))
                 DispatchQueue.main.async {
                     self.tempLabel.isHidden = false
+                    self.minMaxCurrentLabel.isHidden = false
                 }
             }
             if newHeight != headerViewHeight.constant {
@@ -131,9 +149,11 @@ extension ViewController {
             }
         }
     }
+    
 }
 
 
+//MARK:- CollectionView
 
 extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -164,12 +184,41 @@ extension ViewController: CLLocationManagerDelegate {
             let lat = location.coordinate.latitude
             let lon = location.coordinate.longitude
             
-            print(lat,lon)
+            // Here we capture coordinates and call fetch weather
+            
+            weatherManager.fetchWeather(latitude: lat, longitude: lon)
         }
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error)
     }
+    
+}
+
+//MARK:- WeatherManagerDelegate
+
+
+extension ViewController: WeatherManagerDelegate {
+    func didUpdateWeather(_ weatgerManager: WeatherManager, weather: WeatherData) {
+        DispatchQueue.main.async {
+            
+            // Here we get data from model and setup UI
+            
+            
+            self.tempLabel.text = String(format: "%.f", weather.main.temp)
+            self.descriptionLabel.text = weather.weather[0].description
+            self.minMaxCurrentLabel.text = "мин. \(String(format: "%.f", weather.main.temp_min))°, макс \(String(format: "%.f", weather.main.temp_max))°"
+            self.myArray.append(weather)
+            
+
+        }
+        
+    }
+    
+    func didFailWithError(error: Error) {
+        print(error)
+    }
+    
     
 }

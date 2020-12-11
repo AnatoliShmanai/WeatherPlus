@@ -16,10 +16,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="652" height="621"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="JnW-8n-5BK">
-                        <rect key="frame" x="0.0" y="0.0" width="652" height="621"/>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="2Tc-Ww-G7o">
+                        <rect key="frame" x="0.0" y="5" width="652" height="611"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="x3e-Cc-cx9">
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="b5N-fl-fU6">
                             <size key="itemSize" width="128" height="128"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -29,16 +29,16 @@
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="JnW-8n-5BK" secondAttribute="trailing" id="3XF-G9-i1y"/>
-                    <constraint firstItem="JnW-8n-5BK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="HbO-zx-rhY"/>
-                    <constraint firstAttribute="bottom" secondItem="JnW-8n-5BK" secondAttribute="bottom" id="hnO-n6-s4C"/>
-                    <constraint firstItem="JnW-8n-5BK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="mWX-rI-IYG"/>
+                    <constraint firstAttribute="bottom" secondItem="2Tc-Ww-G7o" secondAttribute="bottom" constant="5" id="Ih9-uG-vcc"/>
+                    <constraint firstItem="2Tc-Ww-G7o" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Z6I-EP-CAl"/>
+                    <constraint firstItem="2Tc-Ww-G7o" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="fyr-Nr-mBZ"/>
+                    <constraint firstAttribute="trailing" secondItem="2Tc-Ww-G7o" secondAttribute="trailing" id="gRD-hd-Rsl"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
-                <outlet property="dailyCollectionView" destination="JnW-8n-5BK" id="xnl-tV-TAk"/>
+                <outlet property="dailyCollectionView" destination="2Tc-Ww-G7o" id="JTW-rI-IKj"/>
             </connections>
             <point key="canvasLocation" x="77" y="-61"/>
         </tableViewCell>

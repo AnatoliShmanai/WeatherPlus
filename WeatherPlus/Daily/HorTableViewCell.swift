@@ -7,13 +7,16 @@
 
 import UIKit
 
-class HorTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
+class HorTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet var dailyCollectionView: UICollectionView!
+    
+    var dailyArray = [WeatherData]()
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         dailyCollectionView.register(DailyCollectionViewCell.nib(), forCellWithReuseIdentifier: "DailyCollectionViewCell" )
 //        dailyCollectionView.register(DailyCollectionViewCelll.nib(), "DailyCollectionViewCell")
         dailyCollectionView.delegate = self
@@ -25,12 +28,16 @@ class HorTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionV
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        3
+        return 8
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DailyCollectionViewCell", for: indexPath) as! DailyCollectionViewCell
 //        cell.configure(with: models[indexPath.row])
+        if !dailyArray.isEmpty {
+            
+            cell.configure(with: dailyArray[0], and: indexPath)
+        }
         return cell
     }
     
@@ -38,13 +45,19 @@ class HorTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionV
     
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 200, height: 20)
+        return CGSize(width: 368, height: 23 )
     }
     
     
     static func nib() -> UINib {
         return UINib(nibName: "HorTableViewCell",
                      bundle: nil)
+    }
+    func configure(with weather: [WeatherData]) {
+        self.dailyArray = weather
+        DispatchQueue.main.async {
+            self.dailyCollectionView.reloadData()
+        }
     }
 }
 

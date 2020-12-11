@@ -5,7 +5,7 @@
 //  Created by Anatoli Shmanai on 10.12.20.
 //
 
-import Foundation
+import UIKit
 import CoreLocation
 
 
@@ -21,7 +21,29 @@ struct WeatherManager {
     
     var delegate: WeatherManagerDelegate?
     
-    
+   
+
+//    func fetchImage(with imageDescritpion: String) -> UIImage? {
+//        let urlString = "http://openweathermap.org/img/wn/10d@2x.png"
+////
+//        var myImage = UIImage()
+//        
+//        guard let url = URL(string: urlString) else { return nil}
+//        let urlSesseion = URLSession.shared
+//        urlSesseion.dataTask(with: url) { (data, response, error) in
+//            if let error = error {
+//                print(error.localizedDescription)
+//                return
+//            }
+//            
+//            if let data = data, let image = UIImage(data: data) {
+//                myImage = image
+//            }
+//        }.resume()
+//        
+//        
+//        return myImage
+//    }
     
     func fetchWeather(latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
         let urlString = weatherURL + "&lat=\(latitude)&lon=\(longitude)"

@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     
     var myArray = [WeatherData]()
     
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var headerViewHeight: NSLayoutConstraint!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -40,6 +41,7 @@ class ViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         
+        
         weatherManager.delegate = self
         
         locationManager.delegate = self
@@ -54,6 +56,7 @@ class ViewController: UIViewController {
 //        tableView.register(cell, forCellReuseIdentifier: "myCell")
 
     }
+    
     
     
 }
@@ -81,7 +84,8 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource {
         switch indexPath.row {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "HorTableViewCell", for: indexPath) as! HorTableViewCell
-            cell.backgroundColor = .clear
+//            cell.backgroundColor = .clear
+            cell.configure(with: myArray)
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "firstCell", for: indexPath)
@@ -142,7 +146,7 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.row {
         case 0:
-            return 250
+            return 300
         case 1:
             return 100
             
@@ -276,7 +280,7 @@ extension ViewController: WeatherManagerDelegate {
     
 }
 
-//MARK:- DateFoematter
+//MARK:- DateFormatter
 
 extension ViewController {
     func getTimeForDate(_ date: Date?) -> String {

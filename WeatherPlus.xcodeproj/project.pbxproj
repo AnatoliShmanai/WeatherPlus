@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C101A402583F255008BE61C /* Extension + DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF1C25E25836FBB00C7C9B6 /* Extension + DateFormatter.swift */; };
+		5C101A432583F2A5008BE61C /* Extension + FetchHImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF1C26F258374F600C7C9B6 /* Extension + FetchHImage.swift */; };
+		5C101A462583F2CB008BE61C /* Extension + FetchImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF1C2682583736100C7C9B6 /* Extension + FetchImage.swift */; };
 		5C4DF03F257FD585009DBD05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4DF03E257FD585009DBD05 /* AppDelegate.swift */; };
 		5C4DF041257FD585009DBD05 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4DF040257FD585009DBD05 /* SceneDelegate.swift */; };
 		5C4DF043257FD585009DBD05 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4DF042257FD585009DBD05 /* ViewController.swift */; };
@@ -26,11 +29,8 @@
 		5CF1C25625836E0300C7C9B6 /* Extension + Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF1C25525836E0300C7C9B6 /* Extension + Animation.swift */; };
 		5CF1C25925836EF100C7C9B6 /* Extension + CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF1C25825836EF100C7C9B6 /* Extension + CollectionView.swift */; };
 		5CF1C25C25836F5800C7C9B6 /* Extension + WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF1C25B25836F5800C7C9B6 /* Extension + WeatherManager.swift */; };
-		5CF1C25F25836FBB00C7C9B6 /* Extension + DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF1C25E25836FBB00C7C9B6 /* Extension + DateFormatter.swift */; };
 		5CF1C2632583715300C7C9B6 /* Extension + CLLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF1C2622583715300C7C9B6 /* Extension + CLLocation.swift */; };
-		5CF1C2692583736100C7C9B6 /* Extension + FetchImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF1C2682583736100C7C9B6 /* Extension + FetchImage.swift */; };
 		5CF1C26D258373DC00C7C9B6 /* Extension + Configure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF1C26C258373DC00C7C9B6 /* Extension + Configure.swift */; };
-		5CF1C270258374F600C7C9B6 /* Extension + FetchHImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF1C26F258374F600C7C9B6 /* Extension + FetchHImage.swift */; };
 		5CF1C2732583753B00C7C9B6 /* Extenison + HConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF1C2722583753B00C7C9B6 /* Extenison + HConfigure.swift */; };
 		5CF1C2762583BFA500C7C9B6 /* Extension + BackupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF1C2752583BFA500C7C9B6 /* Extension + BackupData.swift */; };
 /* End PBXBuildFile section */
@@ -256,6 +256,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C101A462583F2CB008BE61C /* Extension + FetchImage.swift in Sources */,
+				5C101A432583F2A5008BE61C /* Extension + FetchHImage.swift in Sources */,
+				5C101A402583F255008BE61C /* Extension + DateFormatter.swift in Sources */,
 				5CF1C26D258373DC00C7C9B6 /* Extension + Configure.swift in Sources */,
 				5CF1C25925836EF100C7C9B6 /* Extension + CollectionView.swift in Sources */,
 				5C732D7225822AFB00406440 /* DescriptionTableViewCell.swift in Sources */,
@@ -266,12 +269,9 @@
 				5CF1C2632583715300C7C9B6 /* Extension + CLLocation.swift in Sources */,
 				5CF1C25625836E0300C7C9B6 /* Extension + Animation.swift in Sources */,
 				5C4DF043257FD585009DBD05 /* ViewController.swift in Sources */,
-				5CF1C25F25836FBB00C7C9B6 /* Extension + DateFormatter.swift in Sources */,
 				5CF1C2762583BFA500C7C9B6 /* Extension + BackupData.swift in Sources */,
-				5CF1C270258374F600C7C9B6 /* Extension + FetchHImage.swift in Sources */,
 				5CF1C25325836D8400C7C9B6 /* Extension + TableView.swift in Sources */,
 				5C4DF03F257FD585009DBD05 /* AppDelegate.swift in Sources */,
-				5CF1C2692583736100C7C9B6 /* Extension + FetchImage.swift in Sources */,
 				5C732D762582817500406440 /* DailyCollectionViewCell.swift in Sources */,
 				5C4DF041257FD585009DBD05 /* SceneDelegate.swift in Sources */,
 				5C4DF055257FEFD4009DBD05 /* Model.swift in Sources */,

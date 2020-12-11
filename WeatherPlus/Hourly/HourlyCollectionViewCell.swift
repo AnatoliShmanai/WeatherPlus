@@ -25,7 +25,9 @@ class HourlyCollectionViewCell: UICollectionViewCell {
         return UINib(nibName: "HourlyCollectionViewCell",
                      bundle: nil)
     }
-
+  
+    
+    
 
 }
 

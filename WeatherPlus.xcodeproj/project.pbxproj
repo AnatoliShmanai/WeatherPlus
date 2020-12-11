@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5C0FF1A42583F8A200BF4E22 /* Extension + DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF1C25E25836FBB00C7C9B6 /* Extension + DateFormatter.swift */; };
+		5C0FF1B12583FA5200BF4E22 /* Extension + DateRormatterM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0FF1B02583FA5200BF4E22 /* Extension + DateRormatterM.swift */; };
 		5C101A432583F2A5008BE61C /* Extension + FetchHImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF1C26F258374F600C7C9B6 /* Extension + FetchHImage.swift */; };
 		5C101A462583F2CB008BE61C /* Extension + FetchImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF1C2682583736100C7C9B6 /* Extension + FetchImage.swift */; };
 		5C4DF03F257FD585009DBD05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4DF03E257FD585009DBD05 /* AppDelegate.swift */; };
@@ -36,7 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5C0FF19F2583F7E000BF4E22 /* Extension + DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Extension + DateFormatter.swift"; path = "WeatherPlus/Controller/Extension + DateFormatter.swift"; sourceTree = "<group>"; };
+		5C0FF1B02583FA5200BF4E22 /* Extension + DateRormatterM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + DateRormatterM.swift"; sourceTree = "<group>"; };
 		5C4DF03B257FD585009DBD05 /* WeatherPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C4DF03E257FD585009DBD05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C4DF040257FD585009DBD05 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,7 +58,6 @@
 		5CF1C25525836E0300C7C9B6 /* Extension + Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + Animation.swift"; sourceTree = "<group>"; };
 		5CF1C25825836EF100C7C9B6 /* Extension + CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + CollectionView.swift"; sourceTree = "<group>"; };
 		5CF1C25B25836F5800C7C9B6 /* Extension + WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + WeatherManager.swift"; sourceTree = "<group>"; };
-		5CF1C25E25836FBB00C7C9B6 /* Extension + DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + DateFormatter.swift"; sourceTree = "<group>"; };
 		5CF1C2622583715300C7C9B6 /* Extension + CLLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + CLLocation.swift"; sourceTree = "<group>"; };
 		5CF1C2682583736100C7C9B6 /* Extension + FetchImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + FetchImage.swift"; sourceTree = "<group>"; };
 		5CF1C26C258373DC00C7C9B6 /* Extension + Configure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + Configure.swift"; sourceTree = "<group>"; };
@@ -81,7 +80,6 @@
 		5C4DF032257FD585009DBD05 = {
 			isa = PBXGroup;
 			children = (
-				5C0FF19F2583F7E000BF4E22 /* Extension + DateFormatter.swift */,
 				5C4DF03D257FD585009DBD05 /* WeatherPlus */,
 				5C4DF03C257FD585009DBD05 /* Products */,
 			);
@@ -163,7 +161,7 @@
 				5CF1C25825836EF100C7C9B6 /* Extension + CollectionView.swift */,
 				5CF1C25B25836F5800C7C9B6 /* Extension + WeatherManager.swift */,
 				5CF1C2752583BFA500C7C9B6 /* Extension + BackupData.swift */,
-				5CF1C25E25836FBB00C7C9B6 /* Extension + DateFormatter.swift */,
+				5C0FF1B02583FA5200BF4E22 /* Extension + DateRormatterM.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -258,7 +256,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C0FF1A42583F8A200BF4E22 /* Extension + DateFormatter.swift in Sources */,
 				5C101A462583F2CB008BE61C /* Extension + FetchImage.swift in Sources */,
 				5C101A432583F2A5008BE61C /* Extension + FetchHImage.swift in Sources */,
 				5CF1C26D258373DC00C7C9B6 /* Extension + Configure.swift in Sources */,
@@ -277,6 +274,7 @@
 				5C732D762582817500406440 /* DailyCollectionViewCell.swift in Sources */,
 				5C4DF041257FD585009DBD05 /* SceneDelegate.swift in Sources */,
 				5C4DF055257FEFD4009DBD05 /* Model.swift in Sources */,
+				5C0FF1B12583FA5200BF4E22 /* Extension + DateRormatterM.swift in Sources */,
 				5CF1C2732583753B00C7C9B6 /* Extenison + HConfigure.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

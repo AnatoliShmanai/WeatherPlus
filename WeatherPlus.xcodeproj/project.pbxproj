@@ -22,6 +22,17 @@
 		5C732D7225822AFB00406440 /* DescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C732D7125822AFB00406440 /* DescriptionTableViewCell.swift */; };
 		5C732D762582817500406440 /* DailyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C732D742582817500406440 /* DailyCollectionViewCell.swift */; };
 		5C732D772582817500406440 /* DailyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C732D752582817500406440 /* DailyCollectionViewCell.xib */; };
+		5CF1C25325836D8400C7C9B6 /* Extension + TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF1C25225836D8400C7C9B6 /* Extension + TableView.swift */; };
+		5CF1C25625836E0300C7C9B6 /* Extension + Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF1C25525836E0300C7C9B6 /* Extension + Animation.swift */; };
+		5CF1C25925836EF100C7C9B6 /* Extension + CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF1C25825836EF100C7C9B6 /* Extension + CollectionView.swift */; };
+		5CF1C25C25836F5800C7C9B6 /* Extension + WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF1C25B25836F5800C7C9B6 /* Extension + WeatherManager.swift */; };
+		5CF1C25F25836FBB00C7C9B6 /* Extension + DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF1C25E25836FBB00C7C9B6 /* Extension + DateFormatter.swift */; };
+		5CF1C2632583715300C7C9B6 /* Extension + CLLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF1C2622583715300C7C9B6 /* Extension + CLLocation.swift */; };
+		5CF1C2692583736100C7C9B6 /* Extension + FetchImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF1C2682583736100C7C9B6 /* Extension + FetchImage.swift */; };
+		5CF1C26D258373DC00C7C9B6 /* Extension + Configure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF1C26C258373DC00C7C9B6 /* Extension + Configure.swift */; };
+		5CF1C270258374F600C7C9B6 /* Extension + FetchHImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF1C26F258374F600C7C9B6 /* Extension + FetchHImage.swift */; };
+		5CF1C2732583753B00C7C9B6 /* Extenison + HConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF1C2722583753B00C7C9B6 /* Extenison + HConfigure.swift */; };
+		5CF1C2762583BFA500C7C9B6 /* Extension + BackupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF1C2752583BFA500C7C9B6 /* Extension + BackupData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +53,17 @@
 		5C732D7125822AFB00406440 /* DescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		5C732D742582817500406440 /* DailyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyCollectionViewCell.swift; sourceTree = "<group>"; };
 		5C732D752582817500406440 /* DailyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyCollectionViewCell.xib; sourceTree = "<group>"; };
+		5CF1C25225836D8400C7C9B6 /* Extension + TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + TableView.swift"; sourceTree = "<group>"; };
+		5CF1C25525836E0300C7C9B6 /* Extension + Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + Animation.swift"; sourceTree = "<group>"; };
+		5CF1C25825836EF100C7C9B6 /* Extension + CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + CollectionView.swift"; sourceTree = "<group>"; };
+		5CF1C25B25836F5800C7C9B6 /* Extension + WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + WeatherManager.swift"; sourceTree = "<group>"; };
+		5CF1C25E25836FBB00C7C9B6 /* Extension + DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + DateFormatter.swift"; sourceTree = "<group>"; };
+		5CF1C2622583715300C7C9B6 /* Extension + CLLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + CLLocation.swift"; sourceTree = "<group>"; };
+		5CF1C2682583736100C7C9B6 /* Extension + FetchImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + FetchImage.swift"; sourceTree = "<group>"; };
+		5CF1C26C258373DC00C7C9B6 /* Extension + Configure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + Configure.swift"; sourceTree = "<group>"; };
+		5CF1C26F258374F600C7C9B6 /* Extension + FetchHImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + FetchHImage.swift"; sourceTree = "<group>"; };
+		5CF1C2722583753B00C7C9B6 /* Extenison + HConfigure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extenison + HConfigure.swift"; sourceTree = "<group>"; };
+		5CF1C2752583BFA500C7C9B6 /* Extension + BackupData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + BackupData.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +105,6 @@
 				5C4DF06A25800596009DBD05 /* Daily */,
 				5C732D6925821F7000406440 /* Hourly */,
 				5C4DF047257FD586009DBD05 /* Assets.xcassets */,
-				5C4DF049257FD586009DBD05 /* LaunchScreen.storyboard */,
 				5C4DF04C257FD586009DBD05 /* Info.plist */,
 			);
 			path = WeatherPlus;
@@ -103,6 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				5C732D6C25821FA400406440 /* HourlyCollectionViewCell.swift */,
+				5CF1C2722583753B00C7C9B6 /* Extenison + HConfigure.swift */,
+				5CF1C26F258374F600C7C9B6 /* Extension + FetchHImage.swift */,
 				5C732D6D25821FA400406440 /* HourlyCollectionViewCell.xib */,
 			);
 			path = Hourly;
@@ -112,6 +135,8 @@
 			isa = PBXGroup;
 			children = (
 				5C732D742582817500406440 /* DailyCollectionViewCell.swift */,
+				5CF1C26C258373DC00C7C9B6 /* Extension + Configure.swift */,
+				5CF1C2682583736100C7C9B6 /* Extension + FetchImage.swift */,
 				5C732D752582817500406440 /* DailyCollectionViewCell.xib */,
 			);
 			path = "Daily CustomCell";
@@ -120,8 +145,8 @@
 		5CF0CC732582AB9800A0C520 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5C732D5D258179A400406440 /* WeatherManager.swift */,
 				5C4DF054257FEFD4009DBD05 /* Model.swift */,
+				5C732D5D258179A400406440 /* WeatherManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -130,6 +155,13 @@
 			isa = PBXGroup;
 			children = (
 				5C4DF042257FD585009DBD05 /* ViewController.swift */,
+				5CF1C2622583715300C7C9B6 /* Extension + CLLocation.swift */,
+				5CF1C25525836E0300C7C9B6 /* Extension + Animation.swift */,
+				5CF1C25225836D8400C7C9B6 /* Extension + TableView.swift */,
+				5CF1C25825836EF100C7C9B6 /* Extension + CollectionView.swift */,
+				5CF1C25B25836F5800C7C9B6 /* Extension + WeatherManager.swift */,
+				5CF1C2752583BFA500C7C9B6 /* Extension + BackupData.swift */,
+				5CF1C25E25836FBB00C7C9B6 /* Extension + DateFormatter.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -138,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				5C4DF044257FD585009DBD05 /* Main.storyboard */,
+				5C4DF049257FD586009DBD05 /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -223,15 +256,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CF1C26D258373DC00C7C9B6 /* Extension + Configure.swift in Sources */,
+				5CF1C25925836EF100C7C9B6 /* Extension + CollectionView.swift in Sources */,
 				5C732D7225822AFB00406440 /* DescriptionTableViewCell.swift in Sources */,
 				5C732D6E25821FA400406440 /* HourlyCollectionViewCell.swift in Sources */,
+				5CF1C25C25836F5800C7C9B6 /* Extension + WeatherManager.swift in Sources */,
 				5C732D5E258179A400406440 /* WeatherManager.swift in Sources */,
 				5C4DF067257FF941009DBD05 /* HorTableViewCell.swift in Sources */,
+				5CF1C2632583715300C7C9B6 /* Extension + CLLocation.swift in Sources */,
+				5CF1C25625836E0300C7C9B6 /* Extension + Animation.swift in Sources */,
 				5C4DF043257FD585009DBD05 /* ViewController.swift in Sources */,
+				5CF1C25F25836FBB00C7C9B6 /* Extension + DateFormatter.swift in Sources */,
+				5CF1C2762583BFA500C7C9B6 /* Extension + BackupData.swift in Sources */,
+				5CF1C270258374F600C7C9B6 /* Extension + FetchHImage.swift in Sources */,
+				5CF1C25325836D8400C7C9B6 /* Extension + TableView.swift in Sources */,
 				5C4DF03F257FD585009DBD05 /* AppDelegate.swift in Sources */,
+				5CF1C2692583736100C7C9B6 /* Extension + FetchImage.swift in Sources */,
 				5C732D762582817500406440 /* DailyCollectionViewCell.swift in Sources */,
 				5C4DF041257FD585009DBD05 /* SceneDelegate.swift in Sources */,
 				5C4DF055257FEFD4009DBD05 /* Model.swift in Sources */,
+				5CF1C2732583753B00C7C9B6 /* Extenison + HConfigure.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

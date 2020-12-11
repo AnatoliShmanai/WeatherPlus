@@ -18,7 +18,6 @@ class HorTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionV
         super.awakeFromNib()
         
         dailyCollectionView.register(DailyCollectionViewCell.nib(), forCellWithReuseIdentifier: "DailyCollectionViewCell" )
-//        dailyCollectionView.register(DailyCollectionViewCelll.nib(), "DailyCollectionViewCell")
         dailyCollectionView.delegate = self
         dailyCollectionView.dataSource = self
     }
@@ -27,32 +26,30 @@ class HorTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionV
         super.setSelected(selected, animated: animated)
     }
     
+    static func nib() -> UINib {
+        return UINib(nibName: "HorTableViewCell",
+                     bundle: nil)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 8
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DailyCollectionViewCell", for: indexPath) as! DailyCollectionViewCell
-//        cell.configure(with: models[indexPath.row])
         if !dailyArray.isEmpty {
             
             cell.configure(with: dailyArray[0], and: indexPath)
         }
         return cell
     }
-    
 
-    
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 368, height: 23 )
     }
     
     
-    static func nib() -> UINib {
-        return UINib(nibName: "HorTableViewCell",
-                     bundle: nil)
-    }
     func configure(with weather: [WeatherData]) {
         self.dailyArray = weather
         DispatchQueue.main.async {

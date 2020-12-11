@@ -43,7 +43,7 @@
                                     </label>
                                     <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p8f-io-PMt">
                                         <rect key="frame" x="0.0" y="319" width="414" height="1"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="E4N-4n-Yoc"/>
                                         </constraints>
@@ -72,7 +72,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" alpha="0.94999999999999996" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5lv-Ie-gUc">
-                                <rect key="frame" x="0.0" y="438" width="414" height="458"/>
+                                <rect key="frame" x="0.0" y="438" width="414" height="375"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -94,14 +94,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ВЛАЖНОСТЬ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Rb-cw-5EO">
-                                                    <rect key="frame" x="15" y="8" width="100.5" height="19.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Rb-cw-5EO">
+                                                    <rect key="frame" x="15" y="8" width="0.0" height="0.0"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                                     <color key="textColor" systemColor="systemGray4Color"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="35%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7KV-zY-POo">
-                                                    <rect key="frame" x="15" y="30.5" width="53" height="32"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7KV-zY-POo">
+                                                    <rect key="frame" x="15" y="11" width="0.0" height="0.0"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -174,9 +174,16 @@
                             </collectionView>
                             <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Ev-Al-0lE">
                                 <rect key="frame" x="0.0" y="438" width="414" height="1"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="Gmw-Hh-CzN"/>
+                                </constraints>
+                            </view>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Qg-ne-bIA">
+                                <rect key="frame" x="0.0" y="813" width="414" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="Ei4-rr-6cE"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -185,14 +192,17 @@
                         <constraints>
                             <constraint firstItem="5lv-Ie-gUc" firstAttribute="top" secondItem="PIn-as-mDm" secondAttribute="bottom" id="Atp-Bh-APw"/>
                             <constraint firstItem="PIn-as-mDm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DbH-EE-VnP"/>
+                            <constraint firstItem="4Qg-ne-bIA" firstAttribute="top" secondItem="5lv-Ie-gUc" secondAttribute="bottom" id="FbK-t5-wbr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5Ev-Al-0lE" secondAttribute="trailing" id="Mrr-rQ-7hH"/>
                             <constraint firstItem="PIn-as-mDm" firstAttribute="top" secondItem="hXS-Sh-aaM" secondAttribute="bottom" id="NgJ-rg-WMc"/>
                             <constraint firstItem="5lv-Ie-gUc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Qem-Mr-Hte"/>
                             <constraint firstItem="hXS-Sh-aaM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="QjA-IU-jEW"/>
-                            <constraint firstAttribute="bottom" secondItem="5lv-Ie-gUc" secondAttribute="bottom" id="RkM-aW-ON5"/>
+                            <constraint firstAttribute="bottom" secondItem="5lv-Ie-gUc" secondAttribute="bottom" constant="83" id="RkM-aW-ON5"/>
                             <constraint firstItem="5lv-Ie-gUc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="V8l-gG-JtS"/>
                             <constraint firstItem="PIn-as-mDm" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="WgO-tU-dfa"/>
                             <constraint firstItem="Vki-8c-OOo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YVk-8I-yCL"/>
+                            <constraint firstItem="4Qg-ne-bIA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dnR-fH-ZCh"/>
+                            <constraint firstAttribute="trailing" secondItem="4Qg-ne-bIA" secondAttribute="trailing" id="fHy-ea-Vlv"/>
                             <constraint firstItem="5Ev-Al-0lE" firstAttribute="top" secondItem="PIn-as-mDm" secondAttribute="bottom" id="fal-7v-PFG"/>
                             <constraint firstItem="5lv-Ie-gUc" firstAttribute="top" secondItem="hXS-Sh-aaM" secondAttribute="bottom" constant="118" id="he2-hN-keP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vki-8c-OOo" secondAttribute="trailing" id="ixB-nh-pnT"/>
@@ -205,6 +215,7 @@
                             <constraint firstItem="PIn-as-mDm" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="wxf-oS-62F"/>
                         </constraints>
                     </view>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="cityNameLabel" destination="GWk-ob-4tP" id="2pP-JX-pG9"/>
                         <outlet property="collectionView" destination="PIn-as-mDm" id="ssN-xw-DXK"/>
@@ -217,14 +228,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="121.73913043478262" y="118.52678571428571"/>
+            <point key="canvasLocation" x="1031.8840579710145" y="118.52678571428571"/>
         </scene>
     </scenes>
     <resources>
         <image name="background4" width="540" height="960"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

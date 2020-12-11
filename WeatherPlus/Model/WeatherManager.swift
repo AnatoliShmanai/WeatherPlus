@@ -15,35 +15,14 @@ protocol WeatherManagerDelegate {
 }
 
 
+
 struct WeatherManager {
     
     let weatherURL = "https://api.openweathermap.org/data/2.5/onecall?exclude=minutely&appid=0aa5886e3a2c2ad1cb6debedc3c9e28d&lang=ru&units=metric"
     
     var delegate: WeatherManagerDelegate?
-    
+        
    
-
-//    func fetchImage(with imageDescritpion: String) -> UIImage? {
-//        let urlString = "http://openweathermap.org/img/wn/10d@2x.png"
-////
-//        var myImage = UIImage()
-//        
-//        guard let url = URL(string: urlString) else { return nil}
-//        let urlSesseion = URLSession.shared
-//        urlSesseion.dataTask(with: url) { (data, response, error) in
-//            if let error = error {
-//                print(error.localizedDescription)
-//                return
-//            }
-//            
-//            if let data = data, let image = UIImage(data: data) {
-//                myImage = image
-//            }
-//        }.resume()
-//        
-//        
-//        return myImage
-//    }
     
     func fetchWeather(latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
         let urlString = weatherURL + "&lat=\(latitude)&lon=\(longitude)"
@@ -64,6 +43,7 @@ struct WeatherManager {
             if let safeData = data {
                 if let weather = self.parseJSON(safeData) {
                     self.delegate?.didUpdateWeather(self, weather: weather)
+                    
                 }
             }
         }
@@ -81,5 +61,8 @@ struct WeatherManager {
             return nil
         }
     }
+    
+    
+    
     
 }

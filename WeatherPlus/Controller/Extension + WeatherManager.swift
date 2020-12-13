@@ -11,10 +11,10 @@ import UIKit
 extension ViewController: WeatherManagerDelegate {
     func didUpdateWeather(_ weatgerManager: WeatherManager, weather: WeatherData) {
         
-        self.modelsArray.append(weather)
+        self.modelsArray = [weather]
         
         // Save data to backup
-        self.modelsArray = [weather]
+        saveToBackup(with: weather)
         //
         
         DispatchQueue.main.async {

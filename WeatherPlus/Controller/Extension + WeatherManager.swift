@@ -14,7 +14,7 @@ extension ViewController: WeatherManagerDelegate {
         self.modelsArray.append(weather)
         
         // Save data to backup
-        saveToBackup(with: weather)
+        self.modelsArray = [weather]
         //
         
         DispatchQueue.main.async {

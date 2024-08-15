@@ -3,13 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		5C0FF1B12583FA5200BF4E22 /* Extension + DateRormatterM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0FF1B02583FA5200BF4E22 /* Extension + DateRormatterM.swift */; };
 		5C101A432583F2A5008BE61C /* Extension + FetchHImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF1C26F258374F600C7C9B6 /* Extension + FetchHImage.swift */; };
 		5C101A462583F2CB008BE61C /* Extension + FetchImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF1C2682583736100C7C9B6 /* Extension + FetchImage.swift */; };
+		5C2C7E342C6DFDAD000A6DA3 /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = 5C2C7E332C6DFDAD000A6DA3 /* SwiftProtobuf */; };
+		5C2C7E362C6DFDAD000A6DA3 /* SwiftProtobufPluginLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 5C2C7E352C6DFDAD000A6DA3 /* SwiftProtobufPluginLibrary */; };
 		5C4DF03F257FD585009DBD05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4DF03E257FD585009DBD05 /* AppDelegate.swift */; };
 		5C4DF041257FD585009DBD05 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4DF040257FD585009DBD05 /* SceneDelegate.swift */; };
 		5C4DF043257FD585009DBD05 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4DF042257FD585009DBD05 /* ViewController.swift */; };
@@ -71,6 +73,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C2C7E362C6DFDAD000A6DA3 /* SwiftProtobufPluginLibrary in Frameworks */,
+				5C2C7E342C6DFDAD000A6DA3 /* SwiftProtobuf in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +203,10 @@
 			dependencies = (
 			);
 			name = WeatherPlus;
+			packageProductDependencies = (
+				5C2C7E332C6DFDAD000A6DA3 /* SwiftProtobuf */,
+				5C2C7E352C6DFDAD000A6DA3 /* SwiftProtobufPluginLibrary */,
+			);
 			productName = WeatherPlus;
 			productReference = 5C4DF03B257FD585009DBD05 /* WeatherPlus.app */;
 			productType = "com.apple.product-type.application";
@@ -226,6 +234,9 @@
 				Base,
 			);
 			mainGroup = 5C4DF032257FD585009DBD05;
+			packageReferences = (
+				5C2C7E322C6DFDAD000A6DA3 /* XCRemoteSwiftPackageReference "swift-protobuf" */,
+			);
 			productRefGroup = 5C4DF03C257FD585009DBD05 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -477,6 +488,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5C2C7E322C6DFDAD000A6DA3 /* XCRemoteSwiftPackageReference "swift-protobuf" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-protobuf.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.27.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5C2C7E332C6DFDAD000A6DA3 /* SwiftProtobuf */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5C2C7E322C6DFDAD000A6DA3 /* XCRemoteSwiftPackageReference "swift-protobuf" */;
+			productName = SwiftProtobuf;
+		};
+		5C2C7E352C6DFDAD000A6DA3 /* SwiftProtobufPluginLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5C2C7E322C6DFDAD000A6DA3 /* XCRemoteSwiftPackageReference "swift-protobuf" */;
+			productName = SwiftProtobufPluginLibrary;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5C4DF033257FD585009DBD05 /* Project object */;
 }

@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var cityNameLabel: UILabel!
     
    
-    let maxHeaderHeight: CGFloat = 320
+    let maxHeaderHeight: CGFloat = "fsfs" //test GHA, was 320
     let minHeaderHeight: CGFloat = 120
     var previousScrollOffset: CGFloat = 0
     

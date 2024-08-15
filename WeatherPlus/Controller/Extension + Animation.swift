@@ -17,7 +17,7 @@ extension ViewController {
         return scrollView.contentSize.height > scrollViewMaxHeight
     }
     func setScrollPosition() {
-        self.tableView.contentOffset = CGPoint(x:0, y: 0)
+        self.tableView2.contentOffset = CGPoint(x:0, y: 0) //test GHA
     }
 }
 extension ViewController {

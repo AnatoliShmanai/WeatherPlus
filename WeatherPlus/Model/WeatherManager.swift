@@ -17,18 +17,16 @@ protocol WeatherManagerDelegate {
 
 
 struct WeatherManager {
-    
+
     let weatherURL = "https://api.openweathermap.org/data/2.5/onecall?exclude=minutely&appid=0aa5886e3a2c2ad1cb6debedc3c9e28d&lang=ru&units=metric"
-    
+
     var delegate: WeatherManagerDelegate?
         
-   
-    
     func fetchWeather(latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
         let urlString = weatherURL + "&lat=\(latitude)&lon=\(longitude)"
         performRequest(with: urlString)
     }
-    
+
     func performRequest(with urlString: String) {
         // 1. create url
         guard let url = URL(string: urlString) else { return }
@@ -43,14 +41,14 @@ struct WeatherManager {
             if let safeData = data {
                 if let weather = self.parseJSON(safeData) {
                     self.delegate?.didUpdateWeather(self, weather: weather)
-                    
+
                 }
             }
         }
         // 4. start the task
         task.resume()
     }
-    
+
     func parseJSON(_ weatherData: Data) -> WeatherData? {
         let decoder = JSONDecoder()
         do {
@@ -61,8 +59,4 @@ struct WeatherManager {
             return nil
         }
     }
-    
-    
-    
-    
 }

@@ -13,6 +13,7 @@
 		5C2C7E342C6DFDAD000A6DA3 /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = 5C2C7E332C6DFDAD000A6DA3 /* SwiftProtobuf */; };
 		5C2C7E362C6DFDAD000A6DA3 /* SwiftProtobufPluginLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 5C2C7E352C6DFDAD000A6DA3 /* SwiftProtobufPluginLibrary */; };
 		5C2C7E3E2C6F23CD000A6DA3 /* WeatherPlusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2C7E3D2C6F23CD000A6DA3 /* WeatherPlusTests.swift */; };
+		5C2C7E452C6F2527000A6DA3 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2C7E442C6F2527000A6DA3 /* ViewControllerTests.swift */; };
 		5C4DF03F257FD585009DBD05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4DF03E257FD585009DBD05 /* AppDelegate.swift */; };
 		5C4DF041257FD585009DBD05 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4DF040257FD585009DBD05 /* SceneDelegate.swift */; };
 		5C4DF043257FD585009DBD05 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4DF042257FD585009DBD05 /* ViewController.swift */; };
@@ -54,6 +55,7 @@
 		5C0FF1B02583FA5200BF4E22 /* Extension + DateRormatterM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + DateRormatterM.swift"; sourceTree = "<group>"; };
 		5C2C7E3B2C6F23CD000A6DA3 /* WeatherPlusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherPlusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C2C7E3D2C6F23CD000A6DA3 /* WeatherPlusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherPlusTests.swift; sourceTree = "<group>"; };
+		5C2C7E442C6F2527000A6DA3 /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 		5C4DF03B257FD585009DBD05 /* WeatherPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C4DF03E257FD585009DBD05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C4DF040257FD585009DBD05 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				5C2C7E3D2C6F23CD000A6DA3 /* WeatherPlusTests.swift */,
+				5C2C7E442C6F2527000A6DA3 /* ViewControllerTests.swift */,
 			);
 			path = WeatherPlusTests;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C2C7E452C6F2527000A6DA3 /* ViewControllerTests.swift in Sources */,
 				5C2C7E3E2C6F23CD000A6DA3 /* WeatherPlusTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

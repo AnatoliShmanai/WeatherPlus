@@ -1,6 +1,9 @@
 addReviewers: true
 
-addAssignees: false
+addAssignees: true
+
+assignees:
+  - AnatoliShmanai
 
 reviewers:
   - AnatoliShmanai

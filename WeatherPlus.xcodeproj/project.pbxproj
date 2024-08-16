@@ -12,6 +12,7 @@
 		5C101A462583F2CB008BE61C /* Extension + FetchImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF1C2682583736100C7C9B6 /* Extension + FetchImage.swift */; };
 		5C2C7E342C6DFDAD000A6DA3 /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = 5C2C7E332C6DFDAD000A6DA3 /* SwiftProtobuf */; };
 		5C2C7E362C6DFDAD000A6DA3 /* SwiftProtobufPluginLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 5C2C7E352C6DFDAD000A6DA3 /* SwiftProtobufPluginLibrary */; };
+		5C2C7E3E2C6F23CD000A6DA3 /* WeatherPlusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2C7E3D2C6F23CD000A6DA3 /* WeatherPlusTests.swift */; };
 		5C4DF03F257FD585009DBD05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4DF03E257FD585009DBD05 /* AppDelegate.swift */; };
 		5C4DF041257FD585009DBD05 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4DF040257FD585009DBD05 /* SceneDelegate.swift */; };
 		5C4DF043257FD585009DBD05 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4DF042257FD585009DBD05 /* ViewController.swift */; };
@@ -38,9 +39,21 @@
 		BAC589F79C4AEA7C5FCE928F /* Pods_WeatherPlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDCD505A500496DF6A25139D /* Pods_WeatherPlus.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		5C2C7E3F2C6F23CD000A6DA3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C4DF033257FD585009DBD05 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C4DF03A257FD585009DBD05;
+			remoteInfo = WeatherPlus;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		0E852B12DBF14EFBD6A24184 /* Pods-WeatherPlus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherPlus.debug.xcconfig"; path = "Target Support Files/Pods-WeatherPlus/Pods-WeatherPlus.debug.xcconfig"; sourceTree = "<group>"; };
 		5C0FF1B02583FA5200BF4E22 /* Extension + DateRormatterM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + DateRormatterM.swift"; sourceTree = "<group>"; };
+		5C2C7E3B2C6F23CD000A6DA3 /* WeatherPlusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherPlusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C2C7E3D2C6F23CD000A6DA3 /* WeatherPlusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherPlusTests.swift; sourceTree = "<group>"; };
 		5C4DF03B257FD585009DBD05 /* WeatherPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C4DF03E257FD585009DBD05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C4DF040257FD585009DBD05 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +86,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5C2C7E382C6F23CD000A6DA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5C4DF038257FD585009DBD05 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -92,14 +112,22 @@
 				0E852B12DBF14EFBD6A24184 /* Pods-WeatherPlus.debug.xcconfig */,
 				A8AD49C83BAE9A3EF520DDD7 /* Pods-WeatherPlus.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		5C2C7E3C2C6F23CD000A6DA3 /* WeatherPlusTests */ = {
+			isa = PBXGroup;
+			children = (
+				5C2C7E3D2C6F23CD000A6DA3 /* WeatherPlusTests.swift */,
+			);
+			path = WeatherPlusTests;
 			sourceTree = "<group>";
 		};
 		5C4DF032257FD585009DBD05 = {
 			isa = PBXGroup;
 			children = (
 				5C4DF03D257FD585009DBD05 /* WeatherPlus */,
+				5C2C7E3C2C6F23CD000A6DA3 /* WeatherPlusTests */,
 				5C4DF03C257FD585009DBD05 /* Products */,
 				0A1383F7AA137E51C97241BC /* Pods */,
 				C55FE579251107D24B72AD68 /* Frameworks */,
@@ -110,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				5C4DF03B257FD585009DBD05 /* WeatherPlus.app */,
+				5C2C7E3B2C6F23CD000A6DA3 /* WeatherPlusTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -215,6 +244,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5C2C7E3A2C6F23CD000A6DA3 /* WeatherPlusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C2C7E432C6F23CD000A6DA3 /* Build configuration list for PBXNativeTarget "WeatherPlusTests" */;
+			buildPhases = (
+				5C2C7E372C6F23CD000A6DA3 /* Sources */,
+				5C2C7E382C6F23CD000A6DA3 /* Frameworks */,
+				5C2C7E392C6F23CD000A6DA3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5C2C7E402C6F23CD000A6DA3 /* PBXTargetDependency */,
+			);
+			name = WeatherPlusTests;
+			productName = WeatherPlusTests;
+			productReference = 5C2C7E3B2C6F23CD000A6DA3 /* WeatherPlusTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		5C4DF03A257FD585009DBD05 /* WeatherPlus */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5C4DF04F257FD586009DBD05 /* Build configuration list for PBXNativeTarget "WeatherPlus" */;
@@ -244,9 +291,13 @@
 		5C4DF033257FD585009DBD05 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1220;
+				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
+					5C2C7E3A2C6F23CD000A6DA3 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 5C4DF03A257FD585009DBD05;
+					};
 					5C4DF03A257FD585009DBD05 = {
 						CreatedOnToolsVersion = 12.2;
 					};
@@ -269,11 +320,19 @@
 			projectRoot = "";
 			targets = (
 				5C4DF03A257FD585009DBD05 /* WeatherPlus */,
+				5C2C7E3A2C6F23CD000A6DA3 /* WeatherPlusTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5C2C7E392C6F23CD000A6DA3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5C4DF039257FD585009DBD05 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -332,6 +391,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5C2C7E372C6F23CD000A6DA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C2C7E3E2C6F23CD000A6DA3 /* WeatherPlusTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5C4DF037257FD585009DBD05 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -361,6 +428,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		5C2C7E402C6F23CD000A6DA3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C4DF03A257FD585009DBD05 /* WeatherPlus */;
+			targetProxy = 5C2C7E3F2C6F23CD000A6DA3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		5C4DF044257FD585009DBD05 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -381,6 +456,53 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		5C2C7E412C6F23CD000A6DA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.7now.goldpass.SEMarketplaceTests.WeatherPlusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeatherPlus.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WeatherPlus";
+			};
+			name = Debug;
+		};
+		5C2C7E422C6F23CD000A6DA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.7now.goldpass.SEMarketplaceTests.WeatherPlusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeatherPlus.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WeatherPlus";
+			};
+			name = Release;
+		};
 		5C4DF04D257FD586009DBD05 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -540,6 +662,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5C2C7E432C6F23CD000A6DA3 /* Build configuration list for PBXNativeTarget "WeatherPlusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C2C7E412C6F23CD000A6DA3 /* Debug */,
+				5C2C7E422C6F23CD000A6DA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5C4DF036257FD585009DBD05 /* Build configuration list for PBXProject "WeatherPlus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
